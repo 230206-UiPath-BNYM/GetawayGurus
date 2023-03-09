@@ -8,12 +8,10 @@
 - Claim stuff in the project board by putting your GH profile name in the assignee dropdown.	
 - Make sure you're assigned something for each day and try to get it done by either day's end or the following day.	
 - If you're having trouble, ask for help! If you need someone else's input to finish your part, ask for help!
-
+- Trevor B/Trvobenn will be the one managing the kanban board as well as administering GH (to include pull requests)
 
 ## Daily Meetings:
 
 - Discord/Teams to chat 
 - Daily Stand-ups (but sitting down) regularly scheduled for 4:00 PM EST 
 - Hang out in the Zoom break-out rooms (training zoom link) 
-
-- Trevor B/Trvobenn will be the one managing the kanban board as well as administering GH (to include pull requests)
