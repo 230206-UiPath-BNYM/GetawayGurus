@@ -16,3 +16,4 @@
 - Daily Stand-ups (but sitting down) regularly scheduled for 4:00 PM EST 
 - Hang out in the Zoom break-out rooms (training zoom link) 
 
+- Trevor B/Trvobenn will be the one managing the kanban board as well as administering GH (to include pull requests)
