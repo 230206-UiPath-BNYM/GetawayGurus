@@ -1,2 +1,15 @@
 # GetawayGurus
-Trip planning with optional cost optimization features.
+Trip planning with optional cost optimization features. Whether you want to vacation in style or vacation on a budget, Getaway Gurus has got you covered. By using UiPath, we automate as much of the process as possible as to not waste any time getting you out the door and on your way to your destination. All we need from you is your desired destination and how much you're willing to spend.
+
+## Main Features
+<br>-- Takes in input from user for which city they are planning to visit
+<br>-- Searches for hotels in the area
+<br>-- Searches for local events and activities
+<br>-- Filters hotel and event results based on user's inputed budget
+<br>-- Returns the weather forecast for the week of the area the user is visiting
+
+## Stretch Goals
+<br>-- Returns events and activities based on user hobbies
+<br>-- Suggests local restaurants based on user budget
+<br>-- Packing suggestions based on weather forecast
+<br>-- Tells you what flights are available to the desired location
