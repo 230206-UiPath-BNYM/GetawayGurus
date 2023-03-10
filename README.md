@@ -7,6 +7,7 @@ Trip planning with optional cost optimization features. Whether you want to vaca
 - Searches for local events and activities
 - Filters hotel and event results based on user's inputed budget
 - Returns the weather forecast for the week of the area the user is visiting
+- In C#!
 
 ## Stretch Goals
 - Returns events and activities based on user hobbies
