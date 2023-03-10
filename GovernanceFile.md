@@ -1,7 +1,7 @@
 # Governance document for the group:
 ### ~~~ _Teamwork makes the dream work_ ~~~
 
-## Working on Git:
+## Working on Git & Sequence Guidelines:
 
 - At least one other person checks before merge made to main. 
 - Make sure branches merging are up-to-date with main before each pull request is signed off. 
