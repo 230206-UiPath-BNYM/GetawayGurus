@@ -8,6 +8,7 @@ Trip planning with optional cost optimization features. Whether you want to vaca
 - Filters hotel and event results based on user's inputed budget
 - Returns the weather forecast for the week of the area the user is visiting
 - In C#!
+- Customer info securely stored in Azure SQL Server.
 
 ## Stretch Goals
 - Returns events and activities based on user hobbies
