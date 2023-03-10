@@ -9,6 +9,7 @@
 - Make sure you're assigned something for each day and try to get it done by either day's end or the following day.	
 - If you're having trouble, ask for help! If you need someone else's input to finish your part, ask for help!
 - Trevor B/Trvobenn will be the one managing the kanban board as well as administering GH (to include pull requests)
+- Make sure your sequences are in C#!
 
 ## Daily Meetings:
 
