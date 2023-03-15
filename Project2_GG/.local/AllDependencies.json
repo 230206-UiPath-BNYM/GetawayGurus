@@ -21359,15 +21359,15 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Chase\\.nuget\\packages\\": {}
+    "C:\\Users\\NB67TRV\\.nuget\\packages\\": {}
   },
   "project": {
     "restore": {
       "projectUniqueName": "Project2_GG",
       "projectName": "Project2_GG",
-      "projectPath": "C:\\Revature\\GetawayGurus\\Project2_GG\\.local",
-      "packagesPath": "C:\\Users\\Chase\\.nuget\\packages\\",
-      "outputPath": "C:\\Revature\\GetawayGurus\\Project2_GG\\.local"
+      "projectPath": "C:\\revature\\GetawayGurus\\Project2_GG\\.local",
+      "packagesPath": "C:\\Users\\NB67TRV\\.nuget\\packages\\",
+      "outputPath": "C:\\revature\\GetawayGurus\\Project2_GG\\.local"
     },
     "frameworks": {
       "net6.0-windows7.0": {
@@ -21418,7 +21418,7 @@
             "version": "[1.13.3, 1.13.3]"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\Chase\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\NB67TRV\\AppData\\Local\\Programs\\UiPath\\Studio\\runtime.json"
       }
     },
     "runtimes": {
