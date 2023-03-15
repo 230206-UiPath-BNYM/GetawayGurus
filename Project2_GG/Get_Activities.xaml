@@ -107,6 +107,11 @@
       <Variable x:TypeArguments="x:String" Name="activity3" />
       <Variable x:TypeArguments="x:String" Name="activity4" />
       <Variable x:TypeArguments="x:String" Name="activity5" />
+      <Variable x:TypeArguments="x:String" Name="latLong">
+        <Variable.Default>
+          <Literal x:TypeArguments="x:String">28.118488,-80.670372</Literal>
+        </Variable.Default>
+      </Variable>
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -124,9 +129,15 @@
         <InArgument x:TypeArguments="x:String" x:Key="Authorization">fsq3VdKsFgAQtvXSBr37HRR2TVUQbf2CuBgD3MIF9Kq1T4c=</InArgument>
       </ui:HttpClient.Headers>
       <ui:HttpClient.Parameters>
-        <InArgument x:TypeArguments="x:String" x:Key="categories">10000,14000</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="ll">28.118488,-80.670372</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="radius">8046</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="categories">
+          <Literal x:TypeArguments="x:String">10000,14000</Literal>
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="ll">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">latLong</CSharpValue>
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="radius">
+          <Literal x:TypeArguments="x:String">8046</Literal>
+        </InArgument>
       </ui:HttpClient.Parameters>
       <ui:HttpClient.Result>
         <OutArgument x:TypeArguments="x:String">
