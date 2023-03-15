@@ -1,4 +1,4 @@
-{
+﻿{
   "Workflows": [
     {
       "Path": null,
@@ -25,10 +25,24 @@
       "AddedNamespaces": null
     },
     {
-      "Path": "Main.xaml",
+      "Path": "GetWeather.xaml",
       "SortBy": 0,
       "VariablesSectionElementsOrder": null,
       "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "ForecastWeather.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": null,
+      "ArgumentsSectionElementsOrder": [
+        "io_weather_dt",
+        "in_city",
+        "in_daysStay",
+        "out_cityLat",
+        "out_cityLon"
+      ],
       "ConstantsSectionElementsOrder": null,
       "AddedNamespaces": null
     }

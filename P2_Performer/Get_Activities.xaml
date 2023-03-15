@@ -139,15 +139,11 @@
         <InArgument x:TypeArguments="x:String" x:Key="Authorization">fsq3VdKsFgAQtvXSBr37HRR2TVUQbf2CuBgD3MIF9Kq1T4c=</InArgument>
       </ui:HttpClient.Headers>
       <ui:HttpClient.Parameters>
-        <InArgument x:TypeArguments="x:String" x:Key="categories">
-          <Literal x:TypeArguments="x:String">10000,14000</Literal>
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="categories">10000,14000</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="ll">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_14">stringLatLon</CSharpValue>
         </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="radius">
-          <Literal x:TypeArguments="x:String">8046</Literal>
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="radius">8046</InArgument>
       </ui:HttpClient.Parameters>
       <ui:HttpClient.Result>
         <OutArgument x:TypeArguments="x:String">
@@ -303,11 +299,11 @@
     </ui:MultipleAssign>
     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="430.4,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_4">
       <InArgument x:TypeArguments="x:String">
-        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_22" xml:space="preserve">activity1 + "at " + location1 + "\n" +
-activity2 + "at " + location2 + "\n" +
-activity3 + "at " + location3 + "\n" +
-activity4 + "at " + location4 + "\n" +
-activity5 + "at " + location5</CSharpValue>
+        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_23" xml:space="preserve">activity1 + " at " + location1 + "\n" +
+activity2 + " at " + location2 + "\n" +
+activity3 + " at " + location3 + "\n" +
+activity4 + " at " + location4 + "\n" +
+activity5 + " at " + location5</CSharpValue>
       </InArgument>
     </WriteLine>
   </Sequence>
