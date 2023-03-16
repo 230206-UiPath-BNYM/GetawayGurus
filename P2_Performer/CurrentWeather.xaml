@@ -4,9 +4,10 @@
     <x:Property Name="io_weather_dt" Type="InOutArgument(sd:DataTable)" />
     <x:Property Name="out_cityLat" Type="OutArgument(x:String)" />
     <x:Property Name="out_cityLon" Type="OutArgument(x:String)" />
+    <x:Property Name="in_weatherKey" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>565.3333333333334,2564</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>488.66666666666674,2628</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="37">
@@ -113,7 +114,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="CurrentWeather" sap:VirtualizedContainerService.HintSize="498.66666666666674,2530" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="CurrentWeather" sap:VirtualizedContainerService.HintSize="498.6666666666667,2563.3333333333335" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="weatherContent" />
       <Variable x:TypeArguments="njl:JObject" Name="jsonWeather" />
@@ -172,7 +173,7 @@
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="Need to use property panels to add params with variables.&#xA;Takes q=location string" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request-Current" EnableSSLVerification="True" EndPoint="http://api.weatherapi.com/v1/current.json" sap:VirtualizedContainerService.HintSize="436.6666666666667,134" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" TimeoutMS="6000">
+    <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="Need to use property panels to add params with variables.&#xA;Takes&#xD;&#xA;key = weatherKey &#xD;&#xA;q=location string" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request-Current" EnableSSLVerification="True" EndPoint="http://api.weatherapi.com/v1/current.json" sap:VirtualizedContainerService.HintSize="436.6666666666667,167.33333333333334" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" TimeoutMS="6000">
       <ui:HttpClient.Attachments>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.Attachments>
@@ -183,9 +184,11 @@
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
       </ui:HttpClient.Headers>
       <ui:HttpClient.Parameters>
-        <InArgument x:TypeArguments="x:String" x:Key="key">a22c0ebbfedd4efc9af192621230903</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="key">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_29">in_weatherKey</CSharpValue>
+        </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="q">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">in_city</CSharpValue>
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">in_city</CSharpValue>
         </InArgument>
       </ui:HttpClient.Parameters>
       <ui:HttpClient.Result>
