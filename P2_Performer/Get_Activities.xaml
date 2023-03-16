@@ -108,7 +108,7 @@
       <Variable x:TypeArguments="x:String" Name="activity3" />
       <Variable x:TypeArguments="x:String" Name="activity4" />
       <Variable x:TypeArguments="x:String" Name="activity5" />
-      <Variable x:TypeArguments="x:String" Default="28.118488,-80.670372" Name="latLong" />
+      <Variable x:TypeArguments="x:String" Default="41.881832,-87.623177" Name="latLong" />
       <Variable x:TypeArguments="x:String" Name="stringLatLon" />
       <Variable x:TypeArguments="x:String" Name="location1" />
       <Variable x:TypeArguments="x:String" Name="location2" />
@@ -129,7 +129,7 @@
         </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
-    <ui:GetRobotAsset AssetName="ActivitiesAPIKey" CacheStrategy="None" DisplayName="Get Asset" FolderPath="Shared" sap:VirtualizedContainerService.HintSize="430.4,172.8" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
+    <ui:GetRobotAsset AssetName="ActivitiesAPIKey" CacheStrategy="None" DisplayName="Get Asset" FolderPath="GetawayGurus" sap:VirtualizedContainerService.HintSize="430.4,172.8" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
       <ui:GetRobotAsset.TimeoutMS>
         <InArgument x:TypeArguments="x:Int32" />
       </ui:GetRobotAsset.TimeoutMS>
@@ -152,15 +152,11 @@
         </InArgument>
       </ui:HttpClient.Headers>
       <ui:HttpClient.Parameters>
-        <InArgument x:TypeArguments="x:String" x:Key="categories">
-          <Literal x:TypeArguments="x:String">10000,14000</Literal>
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="categories">10000,14000</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="ll">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">latLong</CSharpValue>
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">stringLatLon</CSharpValue>
         </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="radius">
-          <Literal x:TypeArguments="x:String">8046</Literal>
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="radius">8046</InArgument>
       </ui:HttpClient.Parameters>
       <ui:HttpClient.Result>
         <OutArgument x:TypeArguments="x:String">
