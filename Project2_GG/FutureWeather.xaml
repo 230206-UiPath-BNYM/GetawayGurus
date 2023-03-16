@@ -6,6 +6,7 @@
     <x:Property Name="in_daysStay" Type="InArgument(x:Int32)" />
     <x:Property Name="out_cityLat" Type="OutArgument(x:String)" />
     <x:Property Name="out_cityLon" Type="OutArgument(x:String)" />
+    <x:Property Name="in_weatherKey" Type="InArgument(x:String)" />
   </x:Members>
   <this:FutureWeather.in_dateString>
     <InArgument x:TypeArguments="x:String" />
@@ -14,7 +15,7 @@
     <InArgument x:TypeArguments="x:Int32" />
   </this:FutureWeather.in_daysStay>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>722,4696</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>722,4729.333333333333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="38">
@@ -122,7 +123,7 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="FutureWeather" sap:VirtualizedContainerService.HintSize="732,4631.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="FutureWeather" sap:VirtualizedContainerService.HintSize="732,4664.666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="weatherContent" />
       <Variable x:TypeArguments="njl:JObject" Name="jsonWeather" />
@@ -278,9 +279,9 @@
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <ui:InterruptibleWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Need to request each day, and needs &lt;= to get the last day requested to be the end date." DisplayName="While" sap:VirtualizedContainerService.HintSize="670,2776" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+    <ui:InterruptibleWhile CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Need to request each day, and needs &lt;= to get the last day requested to be the end date." DisplayName="While" sap:VirtualizedContainerService.HintSize="670,2809.3333333333335" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
       <ui:InterruptibleWhile.Body>
-        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="633.3333333333334,2574.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_3">
+        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="633.3333333333334,2608" sap2010:WorkflowViewState.IdRef="Sequence_3">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:String" Name="aDate" />
             <Variable x:TypeArguments="x:String" Name="anAvgTemp" />
@@ -318,7 +319,7 @@
               </InArgument>
             </ui:LogMessage.Message>
           </ui:LogMessage>
-          <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="Need to use property panels to add params with variables.&#xA;Takes q= location and dt = yyyy-MM-dd strings" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request-Future" EnableSSLVerification="True" EndPoint="http://api.weatherapi.com/v1/future.json" sap:VirtualizedContainerService.HintSize="571.3333333333334,150.66666666666666" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" TimeoutMS="6000">
+          <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="Need to use property panels to add params with variables.&#xA;Takes &#xD;&#xA;key = key&#xD;&#xA;q= location&#xD;&#xA;dt = yyyy-MM-dd strings" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request-Future" EnableSSLVerification="True" EndPoint="http://api.weatherapi.com/v1/future.json" sap:VirtualizedContainerService.HintSize="571.3333333333334,184" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" TimeoutMS="6000">
             <ui:HttpClient.Attachments>
               <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
             </ui:HttpClient.Attachments>
@@ -329,12 +330,14 @@
               <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
             </ui:HttpClient.Headers>
             <ui:HttpClient.Parameters>
-              <InArgument x:TypeArguments="x:String" x:Key="key">a22c0ebbfedd4efc9af192621230903</InArgument>
+              <InArgument x:TypeArguments="x:String" x:Key="key">
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">in_weatherKey</CSharpValue>
+              </InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="q">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_1">in_city</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">in_city</CSharpValue>
               </InArgument>
               <InArgument x:TypeArguments="x:String" x:Key="dt">
-                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">in_dateString</CSharpValue>
+                <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">in_dateString</CSharpValue>
               </InArgument>
             </ui:HttpClient.Parameters>
             <ui:HttpClient.Result>
