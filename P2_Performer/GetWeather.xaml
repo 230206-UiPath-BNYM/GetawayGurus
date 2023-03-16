@@ -3,7 +3,7 @@
     <x:Property Name="stringLatLon" Type="OutArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>844,5581.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>844,5766.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
@@ -95,7 +95,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Gets weather in a dt, weather_dt.  If &lt; 2 weeks uses forecast (whole span from current date to end date) if &gt;= 2 weeks uses future weather.  Can use combo." DisplayName="GetWeather" sap:VirtualizedContainerService.HintSize="605.6,5516.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Gets weather in a dt, weather_dt.  If &lt; 2 weeks uses forecast (whole span from current date to end date) if &gt;= 2 weeks uses future weather.  Can use combo." DisplayName="GetWeather" sap:VirtualizedContainerService.HintSize="605.6,5701.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="hotelFormat" />
       <Variable x:TypeArguments="x:String" Name="weatherFormat" />
@@ -381,7 +381,7 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <ui:IfElseIf sap2010:Annotation.AnnotationText="Use different methods to get forecast ( &lt; 14 days from now) and future ( &gt;= 14 days from now) (Yes, the day exactly 14 days from now is retrieved using future) Can also use a combo" DisplayName="Else If - Forecast or Future" sap:VirtualizedContainerService.HintSize="543.2,3159.2" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+    <ui:IfElseIf sap2010:Annotation.AnnotationText="Use different methods to get forecast ( &lt; 14 days from now) and future ( &gt;= 14 days from now) (Yes, the day exactly 14 days from now is retrieved using future) Can also use a combo" DisplayName="Else If - Forecast or Future" sap:VirtualizedContainerService.HintSize="543.2,3344" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
       <ui:IfElseIf.ConditionBlocks>
         <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
           <ui:IfElseIfBlock BlockType="If">
@@ -656,13 +656,34 @@
           </ui:IfElseIfBlock>
           <ui:IfElseIfBlock BlockType="Else">
             <ui:IfElseIfBlock.Then>
-              <Sequence DisplayName="Body-else" sap:VirtualizedContainerService.HintSize="449.6,202.4" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <Sequence DisplayName="Body-else" sap:VirtualizedContainerService.HintSize="449.6,387.2" sap2010:WorkflowViewState.IdRef="Sequence_7">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
                 <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="387.2,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_7" Text="Suspected time traveler." />
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="Takes in city, outputs filled weather_dt" DisplayName="CurrentWeather.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,144.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="CurrentWeather.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="x:String" x:Key="in_city">
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_58">city</CSharpValue>
+                    </InArgument>
+                    <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_weather_dt">
+                      <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_37">weather_dt</CSharpReference>
+                    </InOutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="out_cityLat">
+                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_38">cityLat</CSharpReference>
+                    </OutArgument>
+                    <OutArgument x:TypeArguments="x:String" x:Key="out_cityLon">
+                      <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_39">cityLon</CSharpReference>
+                    </OutArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeWorkflowFile>
               </Sequence>
             </ui:IfElseIfBlock.Then>
           </ui:IfElseIfBlock>
