@@ -5,6 +5,7 @@
     <x:Property Name="in_hotelStartDate" Type="InArgument(x:String)" />
     <x:Property Name="in_hotelEndDate" Type="InArgument(x:String)" />
     <x:Property Name="out_weather_dt" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="in_weatherKey" Type="InArgument(x:String)" />
   </x:Members>
   <this:GetWeather.in_city>
     <InArgument x:TypeArguments="x:String" />
@@ -15,6 +16,9 @@
   <this:GetWeather.in_hotelEndDate>
     <InArgument x:TypeArguments="x:String" />
   </this:GetWeather.in_hotelEndDate>
+  <this:GetWeather.in_weatherKey>
+    <InArgument x:TypeArguments="x:String" />
+  </this:GetWeather.in_weatherKey>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap:VirtualizedContainerService.HintSize>596,5824.666666666667</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
@@ -125,7 +129,6 @@
       <Variable x:TypeArguments="x:Int32" Name="daysToEnd" />
       <Variable x:TypeArguments="x:String" Name="cityLat" />
       <Variable x:TypeArguments="x:String" Name="cityLon" />
-      <Variable x:TypeArguments="x:String" Name="weatherKey" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -140,7 +143,7 @@
         </InArgument>
       </ui:LogMessage.Message>
     </ui:LogMessage>
-    <ui:MultipleAssign sap2010:Annotation.AnnotationText="Test input values - to be replaced with arguements later&#xA;Current date - works&#xA;W/in Forecast - works&#xA;W/in Forecast, 1 day - works&#xA;Future Dates - works&#xA;Future Date - works&#xA;Mixed Forecast and Future -" DisplayName="Multiple Assign - Testing" sap:VirtualizedContainerService.HintSize="544,321.3333333333333" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+    <ui:MultipleAssign sap2010:Annotation.AnnotationText="Test input values - to be replaced with arguements later&#xA;Current date - works&#xA;W/in Forecast - works&#xA;W/in Forecast, 1 day - works&#xA;Future Dates - works&#xA;Future Date - works&#xA;Mixed Forecast and Future -" DisplayName="Multiple Assign - Testing" sap:VirtualizedContainerService.HintSize="544,321.3333333333333" sap2010:WorkflowViewState.IdRef="MultipleAssign_4">
       <ui:MultipleAssign.AssignOperations>
         <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -160,7 +163,7 @@
               </OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
-              <InArgument x:TypeArguments="x:String">04/16/2023</InArgument>
+              <InArgument x:TypeArguments="x:String">4/16/2023</InArgument>
             </ui:AssignOperation.Value>
           </ui:AssignOperation>
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_3">
@@ -176,7 +179,7 @@
           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_20">
             <ui:AssignOperation.To>
               <OutArgument x:TypeArguments="x:String">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_40">weatherKey</CSharpReference>
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_40">in_weatherKey</CSharpReference>
               </OutArgument>
             </ui:AssignOperation.To>
             <ui:AssignOperation.Value>
@@ -438,7 +441,7 @@
                       <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">cityLon</CSharpReference>
                     </OutArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_weatherKey">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">weatherKey</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">in_weatherKey</CSharpValue>
                     </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                   <sap:WorkflowViewStateService.ViewState>
@@ -493,7 +496,7 @@
                       <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_28">cityLon</CSharpReference>
                     </OutArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_weatherKey">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64">weatherKey</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64">in_weatherKey</CSharpValue>
                     </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                   <sap:WorkflowViewStateService.ViewState>
@@ -543,7 +546,7 @@
                       <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_30">cityLon</CSharpReference>
                     </OutArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_weatherKey">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">weatherKey</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_62">in_weatherKey</CSharpValue>
                     </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                   <sap:WorkflowViewStateService.ViewState>
@@ -595,7 +598,7 @@
                       <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_32">cityLon</CSharpReference>
                     </OutArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_weatherKey">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">weatherKey</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_63">in_weatherKey</CSharpValue>
                     </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                   <sap:WorkflowViewStateService.ViewState>
@@ -677,7 +680,7 @@
                       <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_34">cityLon</CSharpReference>
                     </OutArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_weatherKey">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_65">weatherKey</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_65">in_weatherKey</CSharpValue>
                     </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                   <sap:WorkflowViewStateService.ViewState>
@@ -713,7 +716,7 @@
                       <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_39">cityLon</CSharpReference>
                     </OutArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_weatherKey">
-                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">weatherKey</CSharpValue>
+                      <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_61">in_weatherKey</CSharpValue>
                     </InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                   <sap:WorkflowViewStateService.ViewState>
