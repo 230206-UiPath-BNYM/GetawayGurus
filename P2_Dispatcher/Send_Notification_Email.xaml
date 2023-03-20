@@ -142,7 +142,7 @@
                       <umabh:HtmlTextValueMapping Name="name">
                         <umabh:HtmlTextValueMapping.Value>
                           <InArgument x:TypeArguments="x:Object">
-                            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">customerName</CSharpValue>
+                            <CSharpValue x:TypeArguments="x:Object" sap2010:WorkflowViewState.IdRef="CSharpValue`1_8">customerName.TrimEnd()</CSharpValue>
                           </InArgument>
                         </umabh:HtmlTextValueMapping.Value>
                       </umabh:HtmlTextValueMapping>
