@@ -3,7 +3,7 @@
     <x:Property Name="thisRow" Type="InArgument(sd:DataRow)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>439.2,811.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>844,610.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="56">
@@ -89,7 +89,7 @@
       <AssemblyReference>System.Private.Uri</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Add_To_Queue" sap:VirtualizedContainerService.HintSize="449.6,746.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Add_To_Queue" sap:VirtualizedContainerService.HintSize="449.6,335.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="queuingErrors" />
     </Sequence.Variables>
@@ -98,7 +98,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" ContinueOnError="True" DisplayName="Add Queue Item" DueDate="2024-11-23" FolderPath="trevor568@revature.net's workspace" sap:VirtualizedContainerService.HintSize="387.2,634.4" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="P2_Customers">
+    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" ContinueOnError="True" DisplayName="Add Queue Item" DueDate="2024-11-23" FolderPath="GetawayGurus" sap:VirtualizedContainerService.HintSize="387.2,223.2" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="Customer_Info">
       <ui:AddQueueItem.ItemInformation>
         <InArgument x:TypeArguments="x:String" x:Key="Name">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">thisRow["Name"].ToString()</CSharpValue>
