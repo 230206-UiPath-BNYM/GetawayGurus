@@ -10,9 +10,9 @@
     "Google.Apis.Gmail.v1": "[1.60.0.2958]",
     "UiPath.Azure.Activities": "[1.3.2]",
     "UiPath.Database.Activities": "[1.7.1]",
-    "UiPath.Excel.Activities": "[2.18.0-preview]",
+    "UiPath.Excel.Activities": "[2.16.2]",
     "UiPath.Mail.Activities": "[1.18.2]",
-    "UiPath.System.Activities": "[23.2.0-preview]",
+    "UiPath.System.Activities": "[22.10.4]",
     "UiPath.Testing.Activities": "[23.2.0-preview]",
     "UiPath.UIAutomation.Activities": "[23.2.0-preview]",
     "UiPath.WebAPI.Activities": "[1.13.3]"
@@ -29,7 +29,6 @@
     "isAttended": false,
     "requiresUserInteraction": false,
     "supportsPersistence": false,
-    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"

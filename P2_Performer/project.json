@@ -27,7 +27,6 @@
     "isAttended": false,
     "requiresUserInteraction": false,
     "supportsPersistence": false,
-    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
