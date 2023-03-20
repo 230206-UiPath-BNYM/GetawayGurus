@@ -1,6 +1,47 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="P2_API_Calls" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="844,10760.8" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="P2_API_Calls" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:sc="clr-namespace:System.ComponentModel;assembly=System.ComponentModel.TypeConverter" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="destination" Type="InArgument(x:String)" />
+    <x:Property Name="budget" Type="InArgument(x:String)" />
+    <x:Property Name="rating" Type="InArgument(x:String)" />
+    <x:Property Name="rooms" Type="InArgument(x:String)" />
+    <x:Property Name="pool" Type="InArgument(x:String)" />
+    <x:Property Name="checkIn" Type="InArgument(x:String)" />
+    <x:Property Name="checkOut" Type="InArgument(x:String)" />
+    <x:Property Name="travelers" Type="InArgument(x:String)" />
+    <x:Property Name="name" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:P2_API_Calls.destination>
+    <InArgument x:TypeArguments="x:String" />
+  </this:P2_API_Calls.destination>
+  <this:P2_API_Calls.budget>
+    <InArgument x:TypeArguments="x:String" />
+  </this:P2_API_Calls.budget>
+  <this:P2_API_Calls.rating>
+    <InArgument x:TypeArguments="x:String" />
+  </this:P2_API_Calls.rating>
+  <this:P2_API_Calls.rooms>
+    <InArgument x:TypeArguments="x:String" />
+  </this:P2_API_Calls.rooms>
+  <this:P2_API_Calls.pool>
+    <InArgument x:TypeArguments="x:String" />
+  </this:P2_API_Calls.pool>
+  <this:P2_API_Calls.checkIn>
+    <InArgument x:TypeArguments="x:String" />
+  </this:P2_API_Calls.checkIn>
+  <this:P2_API_Calls.checkOut>
+    <InArgument x:TypeArguments="x:String" />
+  </this:P2_API_Calls.checkOut>
+  <this:P2_API_Calls.travelers>
+    <InArgument x:TypeArguments="x:String" />
+  </this:P2_API_Calls.travelers>
+  <this:P2_API_Calls.name>
+    <InArgument x:TypeArguments="x:String" />
+  </this:P2_API_Calls.name>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>844,11203.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
-    <scg:List x:TypeArguments="x:String" Capacity="40">
+    <scg:List x:TypeArguments="x:String" Capacity="80">
       <x:String>GlobalConstantsNamespace</x:String>
       <x:String>GlobalVariablesNamespace</x:String>
       <x:String>Microsoft.VisualBasic</x:String>
@@ -41,6 +82,7 @@
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
       <x:String>UiPath.Web</x:String>
       <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -106,71 +148,73 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get_Hotels" sap:VirtualizedContainerService.HintSize="658.4,10696" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get_Hotels" sap:VirtualizedContainerService.HintSize="658.4,11138.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="destination" />
-      <Variable x:TypeArguments="x:String" Name="budget" />
-      <Variable x:TypeArguments="x:String" Name="rating" />
-      <Variable x:TypeArguments="x:String" Name="rooms" />
-      <Variable x:TypeArguments="x:String" Name="pool" />
       <Variable x:TypeArguments="x:String" Name="midHotelName" />
       <Variable x:TypeArguments="x:String" Name="midHotelPrice" />
-      <Variable x:TypeArguments="x:String" Name="checkIn" />
-      <Variable x:TypeArguments="x:String" Name="checkOut" />
-      <Variable x:TypeArguments="x:String" Name="travelers" />
       <Variable x:TypeArguments="x:String" Name="highHotelName" />
       <Variable x:TypeArguments="x:String" Name="highHotelPrice" />
       <Variable x:TypeArguments="x:String" Name="lowHotelName" />
       <Variable x:TypeArguments="x:String" Name="lowHotelPrice" />
       <Variable x:TypeArguments="ui:QueueItem" Name="transaction" />
-      <Variable x:TypeArguments="x:String" Name="name" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get_Queue_Items.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="596,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Get_Queue_Items.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="destination">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">destination</CSharpReference>
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="name">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">name</CSharpReference>
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="budget">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">budget</CSharpReference>
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="startDate">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">checkIn</CSharpReference>
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="endDate">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">checkOut</CSharpReference>
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="starRating">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">rating</CSharpReference>
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="rooms">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">rooms</CSharpReference>
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="travelers">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">travelers</CSharpReference>
-        </OutArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="pool">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">pool</CSharpReference>
-        </OutArgument>
-        <OutArgument x:TypeArguments="ui:QueueItem" x:Key="customerInfo">
-          <CSharpReference x:TypeArguments="ui:QueueItem" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">transaction</CSharpReference>
-        </OutArgument>
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: American Express Travel: Book Flights, Hotels, Cars, Cruises &amp; More" sap:VirtualizedContainerService.HintSize="596,9805.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="0c842970-54bf-4a15-9254-ab323b897c39" Version="V2">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="596,304" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get_Queue_Items.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Get_Queue_Items.xaml">
+            <ui:InvokeWorkflowFile.Arguments>
+              <OutArgument x:TypeArguments="x:String" x:Key="destination">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">destination</CSharpReference>
+              </OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="name">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">name</CSharpReference>
+              </OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="budget">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">budget</CSharpReference>
+              </OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="startDate">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">checkIn</CSharpReference>
+              </OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="endDate">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">checkOut</CSharpReference>
+              </OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="starRating">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">rating</CSharpReference>
+              </OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="rooms">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">rooms</CSharpReference>
+              </OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="travelers">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">travelers</CSharpReference>
+              </OutArgument>
+              <OutArgument x:TypeArguments="x:String" x:Key="pool">
+                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">pool</CSharpReference>
+              </OutArgument>
+              <OutArgument x:TypeArguments="ui:QueueItem" x:Key="customerInfo">
+                <CSharpReference x:TypeArguments="ui:QueueItem" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">transaction</CSharpReference>
+              </OutArgument>
+            </ui:InvokeWorkflowFile.Arguments>
+          </ui:InvokeWorkflowFile>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: American Express Travel: Book Flights, Hotels, Cars, Cruises &amp; More" sap:VirtualizedContainerService.HintSize="596,10291.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="0c842970-54bf-4a15-9254-ab323b897c39" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="562.4,9588.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="562.4,10074.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="variable1" />
             </Sequence.Variables>
@@ -268,30 +312,79 @@
               </uix:NClick.Target>
             </uix:NClick>
             <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="500,90.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
-            <uix:NSelectItem DisplayName="Select Item 'Rooms'" sap:VirtualizedContainerService.HintSize="500,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_3" ScopeIdentifier="0c842970-54bf-4a15-9254-ab323b897c39" Version="V3">
-              <uix:NSelectItem.Item>
-                <InArgument x:TypeArguments="x:String">
-                  <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_17">rooms</CSharpValue>
+            <If sap:VirtualizedContainerService.HintSize="500,645.6" sap2010:WorkflowViewState.IdRef="If_2">
+              <If.Condition>
+                <InArgument x:TypeArguments="x:Boolean">
+                  <CSharpValue x:TypeArguments="x:Boolean" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">rooms.Equals("1")</CSharpValue>
                 </InArgument>
-              </uix:NSelectItem.Item>
-              <uix:NSelectItem.Items>
-                <scg:List x:TypeArguments="x:String" Capacity="4">
-                  <x:String>1 Room</x:String>
-                  <x:String>2 Rooms</x:String>
-                  <x:String>3 Rooms</x:String>
-                  <x:String>4 Rooms</x:String>
-                </scg:List>
-              </uix:NSelectItem.Items>
-              <uix:NSelectItem.Target>
-                <uix:TargetAnchorable BrowserURL="https://www.amextravel.com/hotel-searches/209334891" DesignTimeRectangle="1145, 336, 204, 63" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'1 Room'" FullSelectorArgument="&lt;webctrl id='rooms-dropdown' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='rooms-dropdown' tag='SELECT' type='' class='css-153ac4a' aaname='Rooms' /&gt;" Guid="5cc13838-affa-4219-aa00-9873b90d2190" ImageBase64="" InformativeScreenshot="4b584c6491a9fc3b672602ecbed7ef79.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='American Express Hotels: Las Vegas, Nevada, United States of America - Search Results' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
-                  <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                      <uix:Target DesignTimeRectangle="1145, 300, 68, 30" ElementType="Text" FriendlyName="'Rooms'" FullSelectorArgument="&lt;webctrl aaname='Rooms' parentid='mount' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Rooms' parentid='mount' tag='LABEL' type='' class='css-j3pcbu' check:innerText='Rooms' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAiCAYAAAD8gp97AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAG5SURBVGhD7ZXrrYMwDEbvTswFq6BuQiepGKNSd8gNefHZcTAgVKmtj+Q/jTHxiUn/nLGJCVIwQQomSMEEKZggBROkYIIUTJCCCVIgguZb57pOiX5yr5T/CxwXFGJw0zM99OWcFOTjNqenvpuGoMaEPMZV0I98ascEeSVTn3NGV88Qrm/lrdRTK717dmNaH+7+WPCglijTvOaFEA+R5aQIdQWum6Dn5Ia8JsT4SHkFeaM56Ia3c0P0g/x+3KeyR0nS6TuIFsPJQbnYGJ0kfNcqb08deDdvuMiQ67zuQ8nV3xk5J4hf0DBZ1SlIa9gYryWutUS3m5MOgPS380/mkCBpBBfW5+oTIM2lE5ZPMoNNZxl1jYiUGxHfwe+uEu17Ur+D2BhLkj5GkAd/r4LUjuy7pJl53tQnCSo0Lmw+APsEeda1JdhIvvMOukoQggPA9rNbENlkVQjX8Fn8HRvAxrAB/L1R57SgVm2ae3qCAuRTYzmNkc1RnyITzoJu9ApBHmWPtHbkmCAP+dSEgvRTlHMQbCQG+3wDFwkK4DMQjb99IsioMUEKJkjBBCmYIAUTpGCCFEyQggnaxLl/FFZmoRtKQocAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
-                    </scg:List>
-                  </uix:TargetAnchorable.Anchors>
-                </uix:TargetAnchorable>
-              </uix:NSelectItem.Target>
-            </uix:NSelectItem>
+              </If.Condition>
+              <If.Then>
+                <Sequence sap:VirtualizedContainerService.HintSize="376.8,247.2" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NSelectItem DisplayName="Select Item 'Rooms'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_3" ScopeIdentifier="0c842970-54bf-4a15-9254-ab323b897c39" Version="V3">
+                    <uix:NSelectItem.Item>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_26">rooms+" Room"</CSharpValue>
+                      </InArgument>
+                    </uix:NSelectItem.Item>
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="4">
+                        <x:String>1 Room</x:String>
+                        <x:String>2 Rooms</x:String>
+                        <x:String>3 Rooms</x:String>
+                        <x:String>4 Rooms</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.amextravel.com/hotel-searches/209334891" DesignTimeRectangle="1145, 336, 204, 63" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'1 Room'" FullSelectorArgument="&lt;webctrl id='rooms-dropdown' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='rooms-dropdown' tag='SELECT' type='' class='css-153ac4a' aaname='Rooms' /&gt;" Guid="5cc13838-affa-4219-aa00-9873b90d2190" ImageBase64="" InformativeScreenshot="4b584c6491a9fc3b672602ecbed7ef79.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='American Express Hotels: Las Vegas, Nevada, United States of America - Search Results' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="1145, 300, 68, 30" ElementType="Text" FriendlyName="'Rooms'" FullSelectorArgument="&lt;webctrl aaname='Rooms' parentid='mount' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Rooms' parentid='mount' tag='LABEL' type='' class='css-j3pcbu' check:innerText='Rooms' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAiCAYAAAD8gp97AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAG5SURBVGhD7ZXrrYMwDEbvTswFq6BuQiepGKNSd8gNefHZcTAgVKmtj+Q/jTHxiUn/nLGJCVIwQQomSMEEKZggBROkYIIUTJCCCVIgguZb57pOiX5yr5T/CxwXFGJw0zM99OWcFOTjNqenvpuGoMaEPMZV0I98ascEeSVTn3NGV88Qrm/lrdRTK717dmNaH+7+WPCglijTvOaFEA+R5aQIdQWum6Dn5Ia8JsT4SHkFeaM56Ia3c0P0g/x+3KeyR0nS6TuIFsPJQbnYGJ0kfNcqb08deDdvuMiQ67zuQ8nV3xk5J4hf0DBZ1SlIa9gYryWutUS3m5MOgPS380/mkCBpBBfW5+oTIM2lE5ZPMoNNZxl1jYiUGxHfwe+uEu17Ur+D2BhLkj5GkAd/r4LUjuy7pJl53tQnCSo0Lmw+APsEeda1JdhIvvMOukoQggPA9rNbENlkVQjX8Fn8HRvAxrAB/L1R57SgVm2ae3qCAuRTYzmNkc1RnyITzoJu9ApBHmWPtHbkmCAP+dSEgvRTlHMQbCQG+3wDFwkK4DMQjb99IsioMUEKJkjBBCmYIAUTpGCCFEyQggnaxLl/FFZmoRtKQocAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap:VirtualizedContainerService.HintSize="376.8,247.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NSelectItem DisplayName="Select Item 'Rooms'" sap:VirtualizedContainerService.HintSize="333.6,157.6" sap2010:WorkflowViewState.IdRef="NSelectItem_4" ScopeIdentifier="0c842970-54bf-4a15-9254-ab323b897c39" Version="V3">
+                    <uix:NSelectItem.Item>
+                      <InArgument x:TypeArguments="x:String">
+                        <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_27">rooms+" Rooms"</CSharpValue>
+                      </InArgument>
+                    </uix:NSelectItem.Item>
+                    <uix:NSelectItem.Items>
+                      <scg:List x:TypeArguments="x:String" Capacity="4">
+                        <x:String>1 Room</x:String>
+                        <x:String>2 Rooms</x:String>
+                        <x:String>3 Rooms</x:String>
+                        <x:String>4 Rooms</x:String>
+                      </scg:List>
+                    </uix:NSelectItem.Items>
+                    <uix:NSelectItem.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.amextravel.com/hotel-searches/209334891" DesignTimeRectangle="1145, 336, 204, 63" DesignTimeScaleFactor="1.25" ElementType="DropDown" FriendlyName="'1 Room'" FullSelectorArgument="&lt;webctrl id='rooms-dropdown' tag='SELECT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='rooms-dropdown' tag='SELECT' type='' class='css-153ac4a' aaname='Rooms' /&gt;" Guid="5cc13838-affa-4219-aa00-9873b90d2190" ImageBase64="" InformativeScreenshot="4b584c6491a9fc3b672602ecbed7ef79.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='American Express Hotels: Las Vegas, Nevada, United States of America - Search Results' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="1145, 300, 68, 30" ElementType="Text" FriendlyName="'Rooms'" FullSelectorArgument="&lt;webctrl aaname='Rooms' parentid='mount' tag='LABEL' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Rooms' parentid='mount' tag='LABEL' type='' class='css-j3pcbu' check:innerText='Rooms' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEgAAAAiCAYAAAD8gp97AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAG5SURBVGhD7ZXrrYMwDEbvTswFq6BuQiepGKNSd8gNefHZcTAgVKmtj+Q/jTHxiUn/nLGJCVIwQQomSMEEKZggBROkYIIUTJCCCVIgguZb57pOiX5yr5T/CxwXFGJw0zM99OWcFOTjNqenvpuGoMaEPMZV0I98ascEeSVTn3NGV88Qrm/lrdRTK717dmNaH+7+WPCglijTvOaFEA+R5aQIdQWum6Dn5Ia8JsT4SHkFeaM56Ia3c0P0g/x+3KeyR0nS6TuIFsPJQbnYGJ0kfNcqb08deDdvuMiQ67zuQ8nV3xk5J4hf0DBZ1SlIa9gYryWutUS3m5MOgPS380/mkCBpBBfW5+oTIM2lE5ZPMoNNZxl1jYiUGxHfwe+uEu17Ur+D2BhLkj5GkAd/r4LUjuy7pJl53tQnCSo0Lmw+APsEeda1JdhIvvMOukoQggPA9rNbENlkVQjX8Fn8HRvAxrAB/L1R57SgVm2ae3qCAuRTYzmNkc1RnyITzoJu9ApBHmWPtHbkmCAP+dSEgvRTlHMQbCQG+3wDFwkK4DMQjb99IsioMUEKJkjBBCmYIAUTpGCCFEyQggnaxLl/FFZmoRtKQocAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NSelectItem.Target>
+                  </uix:NSelectItem>
+                </Sequence>
+              </If.Else>
+            </If>
             <uix:NClick ClickType="Single" DisplayName="Click 'Travelers'" sap:VirtualizedContainerService.HintSize="500,157.6" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="0c842970-54bf-4a15-9254-ab323b897c39" Version="V3">
               <uix:NClick.Target>
                 <uix:TargetAnchorable BrowserURL="https://www.amextravel.com/hotel-searches/209311292" DesignTimeRectangle="1348, 330, 204, 69" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'1'" FullSelectorArgument="&lt;webctrl parentid='travelers-dropdown-dropdown-combobox' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='travelers-dropdown-dropdown-combobox' tag='DIV' type='' class='InputText hasValue InputText--readOnly' aaname='' /&gt;" Guid="542dea54-4c54-4409-b345-8f2aae3b3515" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANAAAABJCAYAAABMzaj/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAMLSURBVHhe7dhfS1MBHMbxg+/A1+KVeNNrSOgiCLwIijL00rvuIijEjAKN6AVkRK2XEOWfC93cBO1iUy90myASc4Xorz1nm9nZSZq/nUHb94EPnOM5Z3dfzmZgjLErj4AYc4yAGHOMgBhzjIAYc4yAGHOMgBhzjIAYc4yAGHMsKJZKjcPfKx+ULbeRs6XlRVtc+gr0NXWgHtRFdEF6PW35Qr5xara9U7BM7W/7xaJVjqtW/fET6GvqQD2oC/XRXCp7ZIEuKiK9iVSYbiIcoJW6UB/qRPEMTmUs0AXVlc1lw9eUjqMPAqhTH+pkZGbLFtYO6wGpLH3PE94+wN81WxmYXLWT07N6QNL8wXTxZgCt1EkwsRr+DiIgoE0EBDgQEOBAQIADAQEOBAQ4EBDgQECAAwEBDgQEOBAQ4EBAgAMBAQ4EBDgQEOBAQIADAQEOyQdUWbe560M2/m4v/jrwH0s4oO+2Mj1qQ0MEhN6UXECVA1uZH7PhWjwEhF6VTEC7X2zu7rVaOMM2PjFOQOia9x8+2eiNm/bq9ZvY65fRM3pWnxF3PU4CAe3Z2/t664zaw1TBqstPCQhd8+jxkzACefb8Zew9cWZmX5w/p8+IuydOIgF9nJ63z7uNcwJCF21ufrNbY7fbiuhiPHpWnxF3X5wEAoogIHRZOxF54hECQk/6l4i88QgBoWddFlEn4hECQk+Li6hT8QgBoedFI+pUPEJA6AvRiDoRjxAQ+oaCuXPvQagT8QgBAQ4EBDgkHxDQwwgIcCAgwIGAAAcCAhwICHAgIMCBgAAHAgIcCAhwICDAgYAABwICHAgIcCAgwIGAAAcCAhwICHAgIMChJaDKcdWWlhdDOo4+AKCu2cofAe0Xi5bNZS23kQuPow8BqFMf6uQ8IBWVXk9bsVSy8kHZMrVj3kJAK3WhPtTJeUCKJ1/Ihyfa9k4hvEmlERJQD0c9qAv1oQ1MrtrJ6ZkFevNEp8L0mtJ3veY/F4B+pQ7Ug7pobmRmyxbWDi1onDPG2lgqe2SDUxkCYuyqS2WP7BcmG91QNLIB1wAAAABJRU5ErkJggg==" InformativeScreenshot="4b006fbb27f70b6102c0f8b715f880f2.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='American Express Hotels: Las Vegas, Nevada, United States of America - Search Results' /&gt;" SearchSteps="FuzzySelector, Image" Version="V1" Visibility="Interactive">
@@ -443,7 +536,7 @@
                 </sc:BindingList>
               </ui:IfElseIf.ConditionBlocks>
             </ui:IfElseIf>
-            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="500,1256" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="500,1253.6" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
               <ui:IfElseIf.ConditionBlocks>
                 <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                   <ui:IfElseIfBlock BlockType="If">
@@ -764,28 +857,6 @@
         <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAA7dJREFUWEfFVmtIVEEU7v2iiOgFvR8E1Z+ifhT0I6KgiCIqiKL60Y/+9bS0Uqm0h5VRWSlmJflACiqsLJJKUioqTV111Vwfm65v3fW96/qY5jv3znqv3mSv4nbgY+6cMzP3mzPnnJlhw45nsP8KTaUnoan0JDSVnoSmsh+M8spkM/1zVJjBMfJkX73AuNMGmjvlXHYfm24CR55bmJbsjiyRv/rKneRaIl7d3CFrekQXASxSUt9OE3Mq7cxQYWemWqn/3dxKra2tk/QCnd2MfrzjUTHZ61rVdl0E9sf8oUXSytpcuvHeBtXO4n7ZVHMSjI2kL7U5qT3A11DadREAYwjcjf7qm7+p9U2oID1EEFgZLNl2Pu45mgZ7FxGed9FI8QC72wS2PiiiRfKqHWwED7hFl3KZpcHJxpwysMlns1ijo4vsgsDRFxa2LCiPjVacfeiXOrIFJlaxaX46CSQXttAih+JKqX83pVbVD/pYTX1B4NhLC7v1uYa+g5NqyLaKewzZUsaJ6yKw9nYBLYBzxI4m+mSxYh6MNS2dLMnUTGOQUvaObhUBBNxY7qGlV/NYukWKm20RUjDqIhCfLQUSFtWyC4RxFysJQPZFm6m/hm8C7St5LbcJ4Bx5JrFavtsJPIDgAe/XFcxHgcPPymjswsBcFp1qpW9BQHgImHU+h9IS4jaByB/1NMH/XSX1D8ZKqdhbVtzIJzuCFa0ggP8tuZxLOr+3laSDuEVgzgUjc0rBTZGMGGhplxW9BAUIdgQYWvSF1PNYgA4xIgQZBF2/BALeV1HuCogFHNyPSv2/INytlFanNLdZ3ohbQSjgFV9Ok65/qta0A9sfFrsCbkt4kcuDkNTSNjbpTBbVkafpNtINisC6EBMVHCWiflrJ5ct58GLM3igz6+KeyK1ysKm+0rlHfKujdaz8mAZFQBQYLcEZL+BZgXEI3Nk8npRz8HMq5WJxd9CbwGJejjfcL1Qh/Ku0O0gBvynpzpfniyzAz1EVSS+M7kAQuMbLLvq4UOYHGFW48kEqyRD8SBwFEMLfBRBEv/DOkB0B0lUE42YejHgVDT+RyWLSrGQ3W51EeFAE8MjApaREYn4TpemmsELXmA6eCW/4uwAPGgDfEDxuBkVAC3uemNku+b2wMbSQyAjB7uEFvAlSiqTbdUAEKps6KKe1kFlud32j6ECQmqIyIh1hy+fvCsiACOiRWHnX6++ZWLtGadRFAFVsLn9O6QHOXMyfzi+g3nZdBIYEmkpPQlPpSWgqPYYM9hcC0t7O3aWsUQAAAABJRU5ErkJggg==" InformativeScreenshot="33723b43759092aed39c933561668625.jpg" Selector="&lt;html app='chrome.exe' title='American Express Travel: Book Flights, Hotels, Cars, Cruises &amp;amp; More' /&gt;" Title="American Express Travel: Book Flights, Hotels, Cars, Cruises &amp; More" Url="https://www.americanexpress.com/en-us/travel?extlink=us-tls-ps-ps-1020&amp;ds_kid=43700044767697172&amp;gclid=Cj0KCQiAx6ugBhCcARIsAGNmMbgPY9OsN63lHopdDzO-vUaEAAE0eMqtmC4zqaSOy81fqSesySH5FbIaAs_bEALw_wcB&amp;gclsrc=aw.ds" />
       </uix:NApplicationCard.TargetApp>
     </uix:NApplicationCard>
-    <ui:SetTransactionStatus ContinueOnError="{x:Null}" ServiceBaseAddress="{x:Null}" DisplayName="Set Transaction Status" ErrorType="Business" FolderPath="GetawayGurus" sap:VirtualizedContainerService.HintSize="596,193.6" sap2010:WorkflowViewState.IdRef="SetTransactionStatus_1" Status="Successful">
-      <ui:SetTransactionStatus.Analytics>
-        <scg:Dictionary x:TypeArguments="x:String, InArgument" />
-      </ui:SetTransactionStatus.Analytics>
-      <ui:SetTransactionStatus.Details>
-        <InArgument x:TypeArguments="x:String" />
-      </ui:SetTransactionStatus.Details>
-      <ui:SetTransactionStatus.Output>
-        <scg:Dictionary x:TypeArguments="x:String, InArgument" />
-      </ui:SetTransactionStatus.Output>
-      <ui:SetTransactionStatus.Reason>
-        <InArgument x:TypeArguments="x:String" />
-      </ui:SetTransactionStatus.Reason>
-      <ui:SetTransactionStatus.TimeoutMS>
-        <InArgument x:TypeArguments="x:Int32" />
-      </ui:SetTransactionStatus.TimeoutMS>
-      <ui:SetTransactionStatus.TransactionItem>
-        <InArgument x:TypeArguments="ui:QueueItem">
-          <CSharpValue x:TypeArguments="ui:QueueItem" sap2010:WorkflowViewState.IdRef="CSharpValue`1_24">transaction</CSharpValue>
-        </InArgument>
-      </ui:SetTransactionStatus.TransactionItem>
-    </ui:SetTransactionStatus>
     <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="596,90.4" sap2010:WorkflowViewState.IdRef="WriteLine_1">
       <InArgument x:TypeArguments="x:String">
         <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_20">lowHotelName + " at " + lowHotelPrice</CSharpValue>

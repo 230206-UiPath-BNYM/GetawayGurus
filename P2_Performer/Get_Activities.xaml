@@ -139,9 +139,14 @@
     </sap:WorkflowViewStateService.ViewState>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetWeather.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="625.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="GetWeather.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="stringLatLon">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">stringLatLon</CSharpReference>
+        <InArgument x:TypeArguments="x:String" x:Key="in_city" />
+        <OutArgument x:TypeArguments="x:String" x:Key="out_stringLatLon">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">stringLatLon</CSharpReference>
         </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_hotelStartDate" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_hotelEndDate" />
+        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_weather_dt" />
+        <InArgument x:TypeArguments="x:String" x:Key="in_weatherKey" />
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:GetRobotAsset AssetName="ActivitiesAPIKey" CacheStrategy="None" DisplayName="Get Asset" FolderPath="GetawayGurus" sap:VirtualizedContainerService.HintSize="625.6,143.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
