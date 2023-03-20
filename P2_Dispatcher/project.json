@@ -1,7 +1,7 @@
 {
   "name": "P2_Dispatcher",
   "description": "The dispatcher for Project 2 Getaway Gurus. The dispatcher loads data into the queue needed to perform the automation workflows.",
-  "main": "Main.xaml",
+  "main": "Get_Customer_Email.xaml",
   "dependencies": {
     "Azure.Core": "[1.30.0]",
     "Google.Apis": "[1.60.0]",
@@ -13,8 +13,8 @@
     "UiPath.Excel.Activities": "[2.16.2]",
     "UiPath.Mail.Activities": "[1.18.2]",
     "UiPath.System.Activities": "[22.10.4]",
-    "UiPath.Testing.Activities": "[23.2.0-preview]",
-    "UiPath.UIAutomation.Activities": "[23.2.0-preview]",
+    "UiPath.Testing.Activities": "[22.10.3]",
+    "UiPath.UIAutomation.Activities": "[22.10.5]",
     "UiPath.WebAPI.Activities": "[1.13.3]"
   },
   "webServices": [],
@@ -29,6 +29,7 @@
     "isAttended": false,
     "requiresUserInteraction": false,
     "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
@@ -49,57 +50,14 @@
     "processOptions": {
       "ignoredFiles": []
     },
-    "fileInfoCollection": [
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "0c93a244-a2b3-4d74-8bc2-06c2397b2cc9",
-        "testCaseType": "TestCase",
-        "executionTemplateType": "Local",
-        "fileName": "Tests\\GetTransactionDataTestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "821dfc88-cf31-49a5-b363-07fb6dc541cc",
-        "testCaseType": "TestCase",
-        "executionTemplateType": "Local",
-        "fileName": "Tests\\InitAllApplicationsTestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "a651fd85-da15-4cf4-b449-5a7f86af913a",
-        "testCaseType": "TestCase",
-        "executionTemplateType": "Local",
-        "fileName": "Tests\\InitAllSettingsTestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "5e970f52-0037-4538-8434-3d6886cf02b1",
-        "testCaseType": "TestCase",
-        "executionTemplateType": "Local",
-        "fileName": "Tests\\MainTestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "8c851720-5ea2-45d1-9ab9-6d0b6222bbe8",
-        "testCaseType": "TestCase",
-        "executionTemplateType": "Local",
-        "fileName": "Tests\\ProcessTestCase.xaml"
-      },
-      {
-        "editingStatus": "InProgress",
-        "testCaseId": "1f86c01b-df13-48f0-b989-e686e378baaf",
-        "testCaseType": "TestCase",
-        "executionTemplateType": "Local",
-        "fileName": "Tests\\WorkflowTestCaseTemplate.xaml"
-      }
-    ],
+    "fileInfoCollection": [],
     "modernBehavior": true
   },
   "expressionLanguage": "CSharp",
   "entryPoints": [
     {
-      "filePath": "Main.xaml",
-      "uniqueId": "ce908234-2bbb-428a-bc32-5a1aa46556f2",
+      "filePath": "Get_Customer_Email.xaml",
+      "uniqueId": "8f4ea0a1-dcdc-4027-8df6-64c762010978",
       "input": [],
       "output": []
     }
