@@ -3,7 +3,7 @@
     <x:Property Name="thisRow" Type="InArgument(sd:DataRow)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>439.2,811.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>860,664.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="56">
@@ -36,6 +36,9 @@
       <x:String>UiPath.Core</x:String>
       <x:String>UiPath.Core.Activities</x:String>
       <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.Database</x:String>
+      <x:String>UiPath.Database.Activities</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -84,18 +87,50 @@
       <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>UiPath.Database</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Add_To_Queue" sap:VirtualizedContainerService.HintSize="449.6,746.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Add_To_Queue" sap:VirtualizedContainerService.HintSize="449.6,600" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="queuingErrors" />
+      <Variable x:TypeArguments="ui:DatabaseConnection" Name="projectDB" />
+      <Variable x:TypeArguments="sd:DataTable" Name="customers_dt" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" ContinueOnError="True" DisplayName="Add Queue Item" DueDate="2024-11-23" FolderPath="trevor568@revature.net's workspace" sap:VirtualizedContainerService.HintSize="387.2,634.4" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="P2_Customers">
+    <ui:DatabaseConnect DisplayName="Connect to database" sap:VirtualizedContainerService.HintSize="387.2,60" sap2010:WorkflowViewState.IdRef="DatabaseConnect_1" ProviderName="Microsoft.Data.SqlClient" ConnectionString="Data Source=az-rev-bnym-p2-useast.database.windows.net;Initial Catalog=az-rev-bnym-p2-useast;User ID=Smasht5;Password=GG^439kdj2;Encrypt=False">
+      <ui:DatabaseConnect.DatabaseConnection>
+        <OutArgument x:TypeArguments="ui:DatabaseConnection">
+          <CSharpReference x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpReference`1_1">projectDB</CSharpReference>
+        </OutArgument>
+      </ui:DatabaseConnect.DatabaseConnection>
+    </ui:DatabaseConnect>
+    <ui:ExecuteQuery ContinueOnError="{x:Null}" TimeoutMS="{x:Null}" CommandType="Text" DisplayName="Run query" sap:VirtualizedContainerService.HintSize="387.2,89.6" sap2010:WorkflowViewState.IdRef="ExecuteQuery_1">
+      <ui:ExecuteQuery.DataTable>
+        <OutArgument x:TypeArguments="sd:DataTable">
+          <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_2">customers_dt</CSharpReference>
+        </OutArgument>
+      </ui:ExecuteQuery.DataTable>
+      <ui:ExecuteQuery.ExistingDbConnection>
+        <InArgument x:TypeArguments="ui:DatabaseConnection">
+          <CSharpValue x:TypeArguments="ui:DatabaseConnection" sap2010:WorkflowViewState.IdRef="CSharpValue`1_11">projectDB</CSharpValue>
+        </InArgument>
+      </ui:ExecuteQuery.ExistingDbConnection>
+      <ui:ExecuteQuery.Parameters>
+        <scg:Dictionary x:TypeArguments="x:String, Argument" />
+      </ui:ExecuteQuery.Parameters>
+      <ui:ExecuteQuery.Sql>
+        <InArgument x:TypeArguments="x:String">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_12">"select * from customers where name = " + thisRow["name"]</CSharpValue>
+        </InArgument>
+      </ui:ExecuteQuery.Sql>
+    </ui:ExecuteQuery>
+    <ui:AddQueueItem ServiceBaseAddress="{x:Null}" ContinueOnError="True" DisplayName="Add Queue Item" DueDate="2024-11-23" FolderPath="GetawayGurus" sap:VirtualizedContainerService.HintSize="387.2,193.6" sap2010:WorkflowViewState.IdRef="AddQueueItem_1" Priority="Normal" QueueType="tripQueue">
       <ui:AddQueueItem.ItemInformation>
         <InArgument x:TypeArguments="x:String" x:Key="Name">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_2">thisRow["Name"].ToString()</CSharpValue>
@@ -135,5 +170,6 @@
         <InArgument x:TypeArguments="x:Int32" />
       </ui:AddQueueItem.TimeoutMS>
     </ui:AddQueueItem>
+    <ui:DatabaseDisconnect DatabaseConnection="{x:Null}" DisplayName="Disconnect from database" sap:VirtualizedContainerService.HintSize="387.2,24.8" sap2010:WorkflowViewState.IdRef="DatabaseDisconnect_1" />
   </Sequence>
 </Activity>
