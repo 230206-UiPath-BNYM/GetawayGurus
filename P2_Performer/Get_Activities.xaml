@@ -1,4 +1,15 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Get_Activities" sap2010:ExpressionActivityEditor.ExpressionActivityEditor="C#" sap:VirtualizedContainerService.HintSize="844,3788" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Get_Activities" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="activities" Type="OutArgument(sd:DataTable)" />
+    <x:Property Name="in_stringLatLon" Type="InArgument(x:String)" />
+    <x:Property Name="in_activitiesKey" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:Get_Activities.in_stringLatLon>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Get_Activities.in_stringLatLon>
+  <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
+  <sap:VirtualizedContainerService.HintSize>844,3451.2</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="41">
       <x:String>GlobalConstantsNamespace</x:String>
@@ -113,7 +124,7 @@
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get_Activities" sap:VirtualizedContainerService.HintSize="688,3723.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get_Activities" sap:VirtualizedContainerService.HintSize="688,3386.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="response" />
       <Variable x:TypeArguments="njl:JObject" Name="response_JSON" />
@@ -123,42 +134,18 @@
       <Variable x:TypeArguments="x:String" Name="activity4" />
       <Variable x:TypeArguments="x:String" Name="activity5" />
       <Variable x:TypeArguments="x:String" Default="41.881832,-87.623177" Name="latLong" />
-      <Variable x:TypeArguments="x:String" Name="stringLatLon" />
       <Variable x:TypeArguments="x:String" Name="location1" />
       <Variable x:TypeArguments="x:String" Name="location2" />
       <Variable x:TypeArguments="x:String" Name="location3" />
       <Variable x:TypeArguments="x:String" Name="location4" />
       <Variable x:TypeArguments="x:String" Name="location5" />
       <Variable x:TypeArguments="x:String" Name="ActivitiesKey" />
-      <Variable x:TypeArguments="sd:DataTable" Name="activities" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetWeather.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="625.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="GetWeather.xaml">
-      <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="in_city" />
-        <OutArgument x:TypeArguments="x:String" x:Key="out_stringLatLon">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_22">stringLatLon</CSharpReference>
-        </OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_hotelStartDate" />
-        <InArgument x:TypeArguments="x:String" x:Key="in_hotelEndDate" />
-        <OutArgument x:TypeArguments="sd:DataTable" x:Key="out_weather_dt" />
-        <InArgument x:TypeArguments="x:String" x:Key="in_weatherKey" />
-      </ui:InvokeWorkflowFile.Arguments>
-    </ui:InvokeWorkflowFile>
-    <ui:GetRobotAsset AssetName="ActivitiesAPIKey" CacheStrategy="None" DisplayName="Get Asset" FolderPath="GetawayGurus" sap:VirtualizedContainerService.HintSize="625.6,143.2" sap2010:WorkflowViewState.IdRef="GetRobotAsset_1">
-      <ui:GetRobotAsset.TimeoutMS>
-        <InArgument x:TypeArguments="x:Int32" />
-      </ui:GetRobotAsset.TimeoutMS>
-      <ui:GetRobotAsset.Value>
-        <OutArgument x:TypeArguments="x:String">
-          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_15">ActivitiesKey</CSharpReference>
-        </OutArgument>
-      </ui:GetRobotAsset.Value>
-    </ui:GetRobotAsset>
     <ui:HttpClient Body="{x:Null}" ClientCertificate="{x:Null}" ClientCertificatePassword="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResourcePath="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" sap2010:Annotation.AnnotationText="Makes a request to the FourSquare API to return activity names and addresses that fall under the categories of Arts and Activities and Events" AuthenticationType="None" BodyFormat="application/xml" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="https://api.foursquare.com/v3/places/search" sap:VirtualizedContainerService.HintSize="625.6,179.2" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="GET" TimeoutMS="6000">
       <ui:HttpClient.Attachments>
         <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
@@ -168,13 +155,13 @@
       </ui:HttpClient.Cookies>
       <ui:HttpClient.Headers>
         <InArgument x:TypeArguments="x:String" x:Key="Authorization">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">ActivitiesKey</CSharpValue>
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_47">in_activitiesKey</CSharpValue>
         </InArgument>
       </ui:HttpClient.Headers>
       <ui:HttpClient.Parameters>
         <InArgument x:TypeArguments="x:String" x:Key="categories">10000,14000</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="ll">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">stringLatLon</CSharpValue>
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_36">in_stringLatLon</CSharpValue>
         </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="radius">8046</InArgument>
       </ui:HttpClient.Parameters>
