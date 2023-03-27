@@ -1,7 +1,8 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="Suggest_resturants" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="resturant_info" Type="OutArgument(sd:DataTable)" />
-    <x:Property Name="in_latlon" Type="InArgument(x:String)" />
+    <x:Property Name="in_cityLon" Type="InArgument(x:String)" />
+    <x:Property Name="in_cityLat" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap:VirtualizedContainerService.HintSize>844,2203.2</sap:VirtualizedContainerService.HintSize>
@@ -123,6 +124,7 @@
       <Variable x:TypeArguments="x:String" Default="&amp;radius=8046&amp;categories=13065&amp;limit=5" Name="end_endpoint" />
       <Variable x:TypeArguments="x:String" Name="final_endpoint" />
       <Variable x:TypeArguments="x:String" Name="s" />
+      <Variable x:TypeArguments="s:String[]" Name="splitString" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -144,7 +146,7 @@
       </Assign.To>
       <Assign.Value>
         <InArgument x:TypeArguments="x:String">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_25">begin_endpoint+lat+middle_endpoint+lon+end_endpoint</CSharpValue>
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_45">begin_endpoint+in_cityLat+middle_endpoint+in_cityLon+end_endpoint</CSharpValue>
         </InArgument>
       </Assign.Value>
     </Assign>
