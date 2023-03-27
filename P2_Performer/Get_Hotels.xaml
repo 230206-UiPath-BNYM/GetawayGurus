@@ -44,7 +44,7 @@
     <InArgument x:TypeArguments="x:String" />
   </this:P2_API_Calls.name>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>844,11205.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>844,10861.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="80">
@@ -154,7 +154,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get_Hotels" sap:VirtualizedContainerService.HintSize="658.4,11140.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get_Hotels" sap:VirtualizedContainerService.HintSize="658.4,10796.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:QueueItem" Name="transaction" />
     </Sequence.Variables>
@@ -163,51 +163,6 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="596,304" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get_Queue_Items.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Get_Queue_Items.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <OutArgument x:TypeArguments="x:String" x:Key="destination">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">destination</CSharpReference>
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="name">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">name</CSharpReference>
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="budget">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">budget</CSharpReference>
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="startDate">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">checkIn</CSharpReference>
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="endDate">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">checkOut</CSharpReference>
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="starRating">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">rating</CSharpReference>
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="rooms">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">rooms</CSharpReference>
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="travelers">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">travelers</CSharpReference>
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="pool">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">pool</CSharpReference>
-              </OutArgument>
-              <OutArgument x:TypeArguments="ui:QueueItem" x:Key="customerInfo">
-                <CSharpReference x:TypeArguments="ui:QueueItem" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">transaction</CSharpReference>
-              </OutArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
     <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: American Express Travel: Book Flights, Hotels, Cars, Cruises &amp; More" sap:VirtualizedContainerService.HintSize="596,10293.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="0c842970-54bf-4a15-9254-ab323b897c39" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
