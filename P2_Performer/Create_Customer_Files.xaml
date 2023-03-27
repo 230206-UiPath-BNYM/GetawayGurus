@@ -8,6 +8,7 @@
     <x:Property Name="in_highHotelPrice" Type="InArgument(x:String)" />
     <x:Property Name="in_restaurant_info" Type="InArgument(sd:DataTable)" />
     <x:Property Name="in_activities" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_name" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap:VirtualizedContainerService.HintSize>844,2365.6</sap:VirtualizedContainerService.HintSize>
@@ -222,7 +223,12 @@
                         </InArgument>
                       </ueab:WriteCellX.Value>
                     </ueab:WriteCellX>
-                    <ueab:SaveExcelFileAsX DisplayName="Save Excel File As" FilePath="CustomerReport" sap:VirtualizedContainerService.HintSize="433.6,208.8" sap2010:WorkflowViewState.IdRef="SaveExcelFileAsX_1" ReplaceExisting="False" SaveAsFileType="OpenXmlWorkbook">
+                    <ueab:SaveExcelFileAsX DisplayName="Save Excel File As" sap:VirtualizedContainerService.HintSize="433.6,208.8" sap2010:WorkflowViewState.IdRef="SaveExcelFileAsX_1" ReplaceExisting="False" SaveAsFileType="OpenXmlWorkbook">
+                      <ueab:SaveExcelFileAsX.FilePath>
+                        <InArgument x:TypeArguments="x:String">
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">in_name</CSharpValue>
+                        </InArgument>
+                      </ueab:SaveExcelFileAsX.FilePath>
                       <ueab:SaveExcelFileAsX.Workbook>
                         <InArgument x:TypeArguments="ue:IWorkbookQuickHandle">
                           <CSharpValue x:TypeArguments="ue:IWorkbookQuickHandle" sap2010:WorkflowViewState.IdRef="CSharpValue`1_3">Excel</CSharpValue>
