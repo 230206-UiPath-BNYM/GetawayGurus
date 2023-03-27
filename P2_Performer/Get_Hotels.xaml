@@ -44,7 +44,7 @@
     <InArgument x:TypeArguments="x:String" />
   </this:P2_API_Calls.name>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>844,11205.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>844,10861.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="80">
@@ -154,7 +154,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get_Hotels" sap:VirtualizedContainerService.HintSize="658.4,11140.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get_Hotels" sap:VirtualizedContainerService.HintSize="658.4,10796.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="ui:QueueItem" Name="transaction" />
     </Sequence.Variables>
@@ -163,51 +163,6 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="596,304" sap2010:WorkflowViewState.IdRef="CommentOut_1">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="Sequence_14">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get_Queue_Items.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="387.2,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Get_Queue_Items.xaml">
-            <ui:InvokeWorkflowFile.Arguments>
-              <OutArgument x:TypeArguments="x:String" x:Key="destination">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_7">destination</CSharpReference>
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="name">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_19">name</CSharpReference>
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="budget">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_6">budget</CSharpReference>
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="startDate">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_8">checkIn</CSharpReference>
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="endDate">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_9">checkOut</CSharpReference>
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="starRating">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_10">rating</CSharpReference>
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="rooms">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_5">rooms</CSharpReference>
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="travelers">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_4">travelers</CSharpReference>
-              </OutArgument>
-              <OutArgument x:TypeArguments="x:String" x:Key="pool">
-                <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_3">pool</CSharpReference>
-              </OutArgument>
-              <OutArgument x:TypeArguments="ui:QueueItem" x:Key="customerInfo">
-                <CSharpReference x:TypeArguments="ui:QueueItem" sap2010:WorkflowViewState.IdRef="CSharpReference`1_18">transaction</CSharpReference>
-              </OutArgument>
-            </ui:InvokeWorkflowFile.Arguments>
-          </ui:InvokeWorkflowFile>
-        </Sequence>
-      </ui:CommentOut.Body>
-    </ui:CommentOut>
     <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: American Express Travel: Book Flights, Hotels, Cars, Cruises &amp; More" sap:VirtualizedContainerService.HintSize="596,10293.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="0c842970-54bf-4a15-9254-ab323b897c39" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
@@ -724,7 +679,7 @@
             </uix:NGetText>
             <uix:NGetText DisplayName="Get Text 'Avg/Night'" sap:VirtualizedContainerService.HintSize="500,157.6" sap2010:WorkflowViewState.IdRef="NGetText_8" ScopeIdentifier="0c842970-54bf-4a15-9254-ab323b897c39" Version="V3">
               <uix:NGetText.Target>
-                <uix:TargetAnchorable BrowserURL="https://www.amextravel.com/hotel-searches/212046233" DesignTimeRectangle="1620, 901, 45, 30" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'$331'" FullSelectorArgument="&lt;webctrl parentid='hotel-card-*' tag='SPAN' idx='9' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hotel-card-*' tag='SPAN' type='' class='' /&gt;" Guid="7518fcee-c700-4683-b626-da58900fd980" ImageBase64="" InformativeScreenshot="d66addc4cc302402546e72e06b1a7490.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='American Express Hotels: Boise, Idaho, United States of America - Search Results' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="https://www.amextravel.com/hotel-searches/212046233" DesignTimeRectangle="1620, 901, 45, 30" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'$306'" FullSelectorArgument="&lt;webctrl parentid='hotel-card-*' tag='SPAN' idx='9' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hotel-card-*' tag='SPAN' type='' class='' /&gt;" Guid="7518fcee-c700-4683-b626-da58900fd980" ImageBase64="" InformativeScreenshot="3aaea0e60c1e67182430b5af298a0305.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='American Express Hotels: Boise, Idaho, United States of America - Search Results' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
                     <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
                       <uix:Target DesignTimeRectangle="1594, 934, 70, 18" ElementType="Text" FriendlyName="'Avg/Night'" FullSelectorArgument="&lt;webctrl aaname='Avg/Night' parentid='hotel-card-*' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Avg/Night' parentid='hotel-card-*' tag='SPAN' type='' class='legal-1 AvgNightlyRate-avgNight' check:innerText='Avg/Night' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAWCAYAAABnnAr9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAISSURBVFhH7ZaBjcMgDEVvp8zVrBJ1k3SSKmNU6g4cHwzBxhBXLaeelC9FvSTgbz/s6H7cKZNOUEadoIw6QRl1gjKqDeq+uGma3HRZ3ZMejdLzNrv5BpenWy/ec1rcFl9xhZxmtz7K+8ZaVTF+9Oppc4uouwlqu/qA18XNHtZyp4dDhORT8QmUv65K+RLUy7KBQu2yQXRQj5UAUeJa0h+TP73cFQUo7YC+DRRGIbV0+XeSFggKzwuo4Z6KxvpV24fi8550MH4tfrW1B6PX90ygNnYg8n1+XngpoFKyZJ+7K94GqSeLztjXSZi5AFE8nu+xC2/yZad/AOrYcweRPRUfGQeqQVVgKDjbGKHURVDSIYYOksdB7HIdP6RYqATTAGXy5PGTVMBHoLRFVYJefB1PQBtXqIqN4piXLEQU2gFl84zx5TdK5qUxEKAoscbVHAPRhVZQWMeTVk48+JD314CSiRSqN+/jJ5O0gsL9PuKQAsor7EO8bwGlLcgKSfHC4vrF/3Pmf8viTN8L3MvCdFB5b7h0UK98o94DReMjg+wiU2UsJEBINS/3Y28FpAXKK3s1QHkdelL8t0DF1pUnwhWNyy5IJ123PJQTpWTDPSUNv/pQOqDSuw4oqOdpBZWaBjFSA4iP+UjpSY7V5zzHgKIxYeMYnvU79i0N9hzWUXGUaQTCNRASaaTnH47e/9YJyiTnfgEvbP3psrts0wAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
@@ -766,20 +721,19 @@
                 </OutArgument>
               </uix:NGetText.TextString>
             </uix:NGetText>
-            <uix:NGetText DisplayName="Get Text 'Avg/Night'" sap:VirtualizedContainerService.HintSize="500,157.6" sap2010:WorkflowViewState.IdRef="NGetText_9" ScopeIdentifier="0c842970-54bf-4a15-9254-ab323b897c39" Version="V3">
+            <uix:NGetText DisplayName="Get Text 'Avg/Night'" sap:VirtualizedContainerService.HintSize="500,157.6" sap2010:WorkflowViewState.IdRef="NGetText_10" ScopeIdentifier="0c842970-54bf-4a15-9254-ab323b897c39" Version="V3">
               <uix:NGetText.Target>
-                <uix:TargetAnchorable BrowserURL="https://www.amextravel.com/hotel-searches/209933738" DesignTimeRectangle="1620, 939, 45, 30" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'$296'" FullSelectorArgument="&lt;webctrl parentid='hotel-card-*' tag='SPAN' idx='9' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hotel-card-*' tag='SPAN' type='' class='' /&gt;" Guid="84faaa9c-54ff-499e-b68f-0f90da2e8bbd" ImageBase64="" InformativeScreenshot="148558d055db5a5726c33885bee15ca3.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='American Express Hotels: Dallas, Texas, United States of America - Search Results' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                <uix:TargetAnchorable BrowserURL="https://www.amextravel.com/hotel-searches/212046233" DesignTimeRectangle="1620, 901, 45, 30" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'$331'" FullSelectorArgument="&lt;webctrl parentid='hotel-card-*' tag='SPAN' idx='9' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='hotel-card-*' tag='SPAN' type='' class='' /&gt;" Guid="7518fcee-c700-4683-b626-da58900fd980" ImageBase64="" InformativeScreenshot="3aaea0e60c1e67182430b5af298a0305.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='American Express Hotels: Boise, Idaho, United States of America - Search Results' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
                   <uix:TargetAnchorable.Anchors>
-                    <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
-                      <uix:Target DesignTimeRectangle="1594, 972, 70, 18" ElementType="Text" FriendlyName="'Avg/Night'" FullSelectorArgument="&lt;webctrl aaname='Avg/Night' parentid='hotel-card-*' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Avg/Night' parentid='hotel-card-538556' tag='SPAN' type='' class='legal-1 AvgNightlyRate-avgNight' check:innerText='Avg/Night' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAWCAYAAABnnAr9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAISSURBVFhH7ZaBjcMgDEVvp8zVrBJ1k3SSKmNU6g4cHwzBxhBXLaeelC9FvSTgbz/s6H7cKZNOUEadoIw6QRl1gjKqDeq+uGma3HRZ3ZMejdLzNrv5BpenWy/ec1rcFl9xhZxmtz7K+8ZaVTF+9Oppc4uouwlqu/qA18XNHtZyp4dDhORT8QmUv65K+RLUy7KBQu2yQXRQj5UAUeJa0h+TP73cFQUo7YC+DRRGIbV0+XeSFggKzwuo4Z6KxvpV24fi8550MH4tfrW1B6PX90ygNnYg8n1+XngpoFKyZJ+7K94GqSeLztjXSZi5AFE8nu+xC2/yZad/AOrYcweRPRUfGQeqQVVgKDjbGKHURVDSIYYOksdB7HIdP6RYqATTAGXy5PGTVMBHoLRFVYJefB1PQBtXqIqN4piXLEQU2gFl84zx5TdK5qUxEKAoscbVHAPRhVZQWMeTVk48+JD314CSiRSqN+/jJ5O0gsL9PuKQAsor7EO8bwGlLcgKSfHC4vrF/3Pmf8viTN8L3MvCdFB5b7h0UK98o94DReMjg+wiU2UsJEBINS/3Y28FpAXKK3s1QHkdelL8t0DF1pUnwhWNyy5IJ123PJQTpWTDPSUNv/pQOqDSuw4oqOdpBZWaBjFSA4iP+UjpSY7V5zzHgKIxYeMYnvU79i0N9hzWUXGUaQTCNRASaaTnH47e/9YJyiTnfgEvbP3psrts0wAAAABJRU5ErkJggg==" SearchSteps="Selector, Image" />
-                      <uix:Target DesignTimeRectangle="1600, 726, 90, 75" FriendlyName="'More sorting options'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' idx='4' parentid='mount' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl type='' class='DynamicSortBar-viewMore border-l pad-2 text-align-center dls-bright-blue' parentid='mount' tag='DIV' aaname='' check:innerText='More&amp;#xD;&amp;#xA;sorting options' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAF4AAABPCAYAAABiWHJQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAJFSURBVHhe7d1LboJAAIdxz+hFvITxGq68gydw2+imNK27Kvi8wpR5gDxGo4nyJ/X7kklaQZr8ZhjYdXA8nQ2j+wG8aAxMyP5Cr+9wPAGvKNvtgVeUZjvgFW3TDHhFwIsCXhTwooAXBbwo4EUBLwp4UcCLAl4U8KKAFwW8KOBFAS8KeFHAiwJeFPCigBcFvCjgRQEvCnhRwIsCXpQYfmPGow8zGCVmET5pdzazSX7OZG3S8Ml/qBfww8nqKmw6z4/ZyQH+mQX4aWKGo5WZZeHjMns8MeMp8E8uwM83bjsZzht/e5mYwXRjFjH4bJ1Plt2mwmgcd3fKdO23KXs8v06Ru1753diEv76ewJ89VAPPAo2XAap6zE5I+J6v/RwotqjmZHr0yjMlXMv+nS7rDbxfwdXV57cZC1SHD8iVFewKd0AB6OEbD+3GOUWtie2g/sDXfi62Co9bh6mfd6k+IbE7KDoZNrfqb71ZPb8ewQdgB+cRi5UZg29vDffC5+dExxvDlyvPbQkXiEdWfO2OuXfFC+oXfNiD3Xt9ZQ+vwz+wxzfg/cS232Ki5764fsEXqBVAWx0+7963mgimu1Z11V954L66nsHHt4MWvC2AlXt04w64tYo9/mV0jW4Tw79vwIsCXhTwooAXBbwo4EUBLwp4UcCLAl4U8KKAFwW8KOBFAS8KeFHAiwJeFPCigBcFvCjgRQEvCnhRwIsCXhTwooAXBbwo4EUBL6r8P1CfyZdhdDO+f9YX+N/N1jC6GdttavaHYw5/Nn9v+hNsSf/D9gAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="1594, 934, 70, 18" ElementType="Text" FriendlyName="'Avg/Night'" FullSelectorArgument="&lt;webctrl aaname='Avg/Night' parentid='hotel-card-*' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Avg/Night' parentid='hotel-card-*' tag='SPAN' type='' class='legal-1 AvgNightlyRate-avgNight' check:innerText='Avg/Night' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEoAAAAWCAYAAABnnAr9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAISSURBVFhH7ZaBjcMgDEVvp8zVrBJ1k3SSKmNU6g4cHwzBxhBXLaeelC9FvSTgbz/s6H7cKZNOUEadoIw6QRl1gjKqDeq+uGma3HRZ3ZMejdLzNrv5BpenWy/ec1rcFl9xhZxmtz7K+8ZaVTF+9Oppc4uouwlqu/qA18XNHtZyp4dDhORT8QmUv65K+RLUy7KBQu2yQXRQj5UAUeJa0h+TP73cFQUo7YC+DRRGIbV0+XeSFggKzwuo4Z6KxvpV24fi8550MH4tfrW1B6PX90ygNnYg8n1+XngpoFKyZJ+7K94GqSeLztjXSZi5AFE8nu+xC2/yZad/AOrYcweRPRUfGQeqQVVgKDjbGKHURVDSIYYOksdB7HIdP6RYqATTAGXy5PGTVMBHoLRFVYJefB1PQBtXqIqN4piXLEQU2gFl84zx5TdK5qUxEKAoscbVHAPRhVZQWMeTVk48+JD314CSiRSqN+/jJ5O0gsL9PuKQAsor7EO8bwGlLcgKSfHC4vrF/3Pmf8viTN8L3MvCdFB5b7h0UK98o94DReMjg+wiU2UsJEBINS/3Y28FpAXKK3s1QHkdelL8t0DF1pUnwhWNyy5IJ123PJQTpWTDPSUNv/pQOqDSuw4oqOdpBZWaBjFSA4iP+UjpSY7V5zzHgKIxYeMYnvU79i0N9hzWUXGUaQTCNRASaaTnH47e/9YJyiTnfgEvbP3psrts0wAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image" />
                     </scg:List>
                   </uix:TargetAnchorable.Anchors>
                 </uix:TargetAnchorable>
               </uix:NGetText.Target>
               <uix:NGetText.TextString>
                 <OutArgument x:TypeArguments="x:String">
-                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_17">lowHotelPrice</CSharpReference>
+                  <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_20">lowHotelPrice</CSharpReference>
                 </OutArgument>
               </uix:NGetText.TextString>
             </uix:NGetText>
