@@ -11,6 +11,7 @@
     <x:Property Name="in_name" Type="InArgument(x:String)" />
     <x:Property Name="in_numDays" Type="InArgument(x:Int32)" />
     <x:Property Name="in_weatherDT" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="in_customerFile" Type="InArgument(x:String)" />
   </x:Members>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
   <sap:VirtualizedContainerService.HintSize>844,3568</sap:VirtualizedContainerService.HintSize>
@@ -304,7 +305,7 @@
                         </InArgument>
                       </ueab:WriteCellX.Value>
                     </ueab:WriteCellX>
-                    <ueab:WriteRangeX DisplayName="Write DataTable to Excel" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteRangeX_3" IgnoreEmptySource="False">
+                    <ueab:WriteRangeX DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="433.6,160" sap2010:WorkflowViewState.IdRef="WriteRangeX_3" IgnoreEmptySource="False">
                       <ueab:WriteRangeX.Destination>
                         <InArgument x:TypeArguments="ue:IReadWriteRangeRef">
                           <CSharpValue x:TypeArguments="ue:IReadWriteRangeRef" sap2010:WorkflowViewState.IdRef="CSharpValue`1_28">Excel.Sheet["Sheet1"].Range["A18:E27"]</CSharpValue>
@@ -316,10 +317,10 @@
                         </InArgument>
                       </ueab:WriteRangeX.Source>
                     </ueab:WriteRangeX>
-                    <ueab:SaveExcelFileAsX DisplayName="Save Excel File As" sap:VirtualizedContainerService.HintSize="433.6,208.8" sap2010:WorkflowViewState.IdRef="SaveExcelFileAsX_1" ReplaceExisting="False" SaveAsFileType="OpenXmlWorkbook">
+                    <ueab:SaveExcelFileAsX DisplayName="Save Excel File As" sap:VirtualizedContainerService.HintSize="433.6,208.8" sap2010:WorkflowViewState.IdRef="SaveExcelFileAsX_1" SaveAsFileType="OpenXmlWorkbook">
                       <ueab:SaveExcelFileAsX.FilePath>
                         <InArgument x:TypeArguments="x:String">
-                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_16">in_name</CSharpValue>
+                          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_30">in_customerFile</CSharpValue>
                         </InArgument>
                       </ueab:SaveExcelFileAsX.FilePath>
                       <ueab:SaveExcelFileAsX.Workbook>
