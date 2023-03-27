@@ -129,6 +129,9 @@
       <Variable x:TypeArguments="x:String" Name="lowHotelPrice" />
       <Variable x:TypeArguments="sd:DataTable" Name="restaurant_info" />
       <Variable x:TypeArguments="sd:DataTable" Name="activities" />
+      <Variable x:TypeArguments="x:Int32" Name="numDays" />
+      <Variable x:TypeArguments="x:String" Name="cityLat" />
+      <Variable x:TypeArguments="x:String" Name="cityLon" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -363,6 +366,15 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_weatherKey">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_7">aKey</CSharpValue>
         </InArgument>
+        <OutArgument x:TypeArguments="x:Int32" x:Key="numDays">
+          <CSharpReference x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpReference`1_25">numDays</CSharpReference>
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="cityLat">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_27">cityLat</CSharpReference>
+        </OutArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="cityLon">
+          <CSharpReference x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpReference`1_26">cityLon</CSharpReference>
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -437,8 +449,11 @@
         <OutArgument x:TypeArguments="sd:DataTable" x:Key="resturant_info">
           <CSharpReference x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpReference`1_23">restaurant_info</CSharpReference>
         </OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_latlon">
-          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_53">stringLatLon</CSharpValue>
+        <InArgument x:TypeArguments="x:String" x:Key="in_cityLon">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_57">cityLon</CSharpValue>
+        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_cityLat">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_59">cityLat</CSharpValue>
         </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
@@ -470,6 +485,12 @@
         </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_name">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_52">aName</CSharpValue>
+        </InArgument>
+        <InArgument x:TypeArguments="x:Int32" x:Key="in_numDays">
+          <CSharpValue x:TypeArguments="x:Int32" sap2010:WorkflowViewState.IdRef="CSharpValue`1_54">numDays</CSharpValue>
+        </InArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_weatherDT">
+          <CSharpValue x:TypeArguments="sd:DataTable" sap2010:WorkflowViewState.IdRef="CSharpValue`1_60">weather_dt</CSharpValue>
         </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
