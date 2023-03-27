@@ -464,6 +464,9 @@
         <InArgument x:TypeArguments="x:String" x:Key="in_destination">
           <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_64">aLocation</CSharpValue>
         </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_startDate">
+          <CSharpValue x:TypeArguments="x:String" sap2010:WorkflowViewState.IdRef="CSharpValue`1_66">aStartDate</CSharpValue>
+        </InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:OutputDataTable DisplayName="Output Data Table" sap:VirtualizedContainerService.HintSize="484.8,80.8" sap2010:WorkflowViewState.IdRef="OutputDataTable_1">
