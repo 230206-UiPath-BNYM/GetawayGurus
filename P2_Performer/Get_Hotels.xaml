@@ -9,6 +9,12 @@
     <x:Property Name="checkOut" Type="InArgument(x:String)" />
     <x:Property Name="travelers" Type="InArgument(x:String)" />
     <x:Property Name="name" Type="InArgument(x:String)" />
+    <x:Property Name="midHotelName" Type="OutArgument(x:String)" />
+    <x:Property Name="midHotelPrice" Type="OutArgument(x:String)" />
+    <x:Property Name="highHotelName" Type="OutArgument(x:String)" />
+    <x:Property Name="highHotelPrice" Type="OutArgument(x:String)" />
+    <x:Property Name="lowHotelName" Type="OutArgument(x:String)" />
+    <x:Property Name="lowHotelPrice" Type="OutArgument(x:String)" />
   </x:Members>
   <this:P2_API_Calls.destination>
     <InArgument x:TypeArguments="x:String" />
@@ -38,7 +44,7 @@
     <InArgument x:TypeArguments="x:String" />
   </this:P2_API_Calls.name>
   <sap2010:ExpressionActivityEditor.ExpressionActivityEditor>C#</sap2010:ExpressionActivityEditor.ExpressionActivityEditor>
-  <sap:VirtualizedContainerService.HintSize>844,11203.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>844,11205.6</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="80">
@@ -148,14 +154,8 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get_Hotels" sap:VirtualizedContainerService.HintSize="658.4,11138.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Get_Hotels" sap:VirtualizedContainerService.HintSize="658.4,11140.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="midHotelName" />
-      <Variable x:TypeArguments="x:String" Name="midHotelPrice" />
-      <Variable x:TypeArguments="x:String" Name="highHotelName" />
-      <Variable x:TypeArguments="x:String" Name="highHotelPrice" />
-      <Variable x:TypeArguments="x:String" Name="lowHotelName" />
-      <Variable x:TypeArguments="x:String" Name="lowHotelPrice" />
       <Variable x:TypeArguments="ui:QueueItem" Name="transaction" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -208,13 +208,13 @@
         </Sequence>
       </ui:CommentOut.Body>
     </ui:CommentOut>
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: American Express Travel: Book Flights, Hotels, Cars, Cruises &amp; More" sap:VirtualizedContainerService.HintSize="596,10291.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="0c842970-54bf-4a15-9254-ab323b897c39" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: American Express Travel: Book Flights, Hotels, Cars, Cruises &amp; More" sap:VirtualizedContainerService.HintSize="596,10293.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" ScopeGuid="0c842970-54bf-4a15-9254-ab323b897c39" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="562.4,10074.4" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="562.4,10076.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="variable1" />
             </Sequence.Variables>
@@ -536,7 +536,7 @@
                 </sc:BindingList>
               </ui:IfElseIf.ConditionBlocks>
             </ui:IfElseIf>
-            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="500,1253.6" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
+            <ui:IfElseIf DisplayName="Else If" sap:VirtualizedContainerService.HintSize="500,1256" sap2010:WorkflowViewState.IdRef="IfElseIf_2">
               <ui:IfElseIf.ConditionBlocks>
                 <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                   <ui:IfElseIfBlock BlockType="If">
