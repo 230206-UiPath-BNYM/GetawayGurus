@@ -1,7 +1,7 @@
 {
   "name": "P2_Dispatcher",
   "description": "The dispatcher for Project 2 Getaway Gurus. The dispatcher loads data into the queue needed to perform the automation workflows.",
-  "main": "Get_Customer_Email.xaml",
+  "main": "Main.xaml",
   "dependencies": {
     "Azure.Core": "[1.30.0]",
     "Google.Apis": "[1.60.0]",
@@ -29,7 +29,6 @@
     "isAttended": false,
     "requiresUserInteraction": false,
     "supportsPersistence": false,
-    "workflowSerialization": "DataContract",
     "excludedLoggedData": [
       "Private:*",
       "*password*"
@@ -58,6 +57,12 @@
     {
       "filePath": "Get_Customer_Email.xaml",
       "uniqueId": "8f4ea0a1-dcdc-4027-8df6-64c762010978",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "ae6d72ac-7f13-4e7f-bef9-379036b71768",
       "input": [],
       "output": []
     }
